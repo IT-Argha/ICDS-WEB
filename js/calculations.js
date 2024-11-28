@@ -1,7 +1,7 @@
 const RATES = {
     section1: {
         egg: {
-            pregnant: 6.50,
+            pregnant: 8.50,
             severe: 6.50,
             general: 6.50
         },
