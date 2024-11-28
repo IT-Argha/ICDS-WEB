@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICDS Calculator</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-btn active" data-section="1">ডিমের ঝোল এবং ভাত (বিভাগ-১)</button>
+            <button class="tab-btn" data-section="2">ভাত, ডাল, সব্জী এবং সয়াবিন/ খেচুড়ি (বিভাগ-২)</button>
+        </div>
+
+        <div class="calculator">
+            <div class="input-section">
+                <h2>বেনিফিসারির সংখ্যা</h2>
+                <div class="input-grid">
+                    <div class="input-headers">
+                        <div>গর্ভবতী ও প্রসূতি</div>
+                        <div>অপুষ্ট শিশু</div>
+                        <div>সাধারণ শিশু</div>
+                    </div>
+                    <div class="input-fields">
+                        <input type="number" id="pregnant" placeholder="গর্ভবতী ও প্রসূতি">
+                        <input type="number" id="severe" placeholder="অপুষ্ট শিশু">
+                        <input type="number" id="general" placeholder="সাধারণ শিশু">
+                    </div>
+                </div>
+            </div>
+
+            <button id="calculateBtn" class="action-btn">CALCULATE</button>
+
+            <div id="results" class="results hidden">
+                <div class="total-beneficiaries">
+                    <div>মোট বেনিফিসারি: <span id="totalBeneficiaries">0</span></div>
+                </div>
+
+                <div class="result-section">
+                    <h3>ডিমের খরচ</h3>
+                    <div class="result-grid" id="eggCosts"></div>
+                </div>
+
+                <div class="result-section">
+                    <h3 id="vegetableTitle">অনন্যা ও আলুর খরচ</h3>
+                    <div class="result-grid" id="vegetableCosts"></div>
+                </div>
+
+                <div class="result-section">
+                    <div class="total-costs">
+                        <div id="combinedTotalTitle">ডিম, আলু ও অন্যান্যর মোট খরচ</div>
+                        <div id="combinedTotal">0</div>
+                    </div>
+                </div>
+
+                <div class="result-section">
+                    <h3>বেনিফিসারি সংখ্যা সকালের জল খাবার</h3>
+                    <div class="result-grid" id="morningSnacks"></div>
+                </div>
+
+                <div class="result-section">
+                    <h3>ছাতু + চিনির খরচ</h3>
+                    <div class="result-grid" id="chatuSugarCosts"></div>
+                </div>
+
+                <div class="total-costs">
+                    <div>ছাতু ও চিনির মোট খরচ: <span id="chatuSugarTotal">0</span></div>
+                    <div>সর্বমোট খরচ: <span id="grandTotal">0</span></div>
+                </div>
+            </div>
+
+            <button id="clearBtn" class="action-btn">CLEAR</button>
+        </div>
+    </div>
+    <script src="js/calculations.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

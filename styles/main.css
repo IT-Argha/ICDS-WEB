@@ -1,0 +1,155 @@
+:root {
+    --primary-color: #046B5F;
+    --secondary-color: #51B435;
+    --purple-color: #6B46C1;
+    --bg-light: #F0F7F7;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f1f1f1;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--purple-color);
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    background-color: var(--purple-color);
+    color: var(--white);
+}
+
+.calculator {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+.input-grid {
+    margin-top: 15px;
+}
+
+.input-headers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    background-color: var(--primary-color);
+    padding: 15px;
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}
+
+.input-fields {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    background-color: var(--bg-light);
+    padding: 15px;
+    border-radius: 0 0 4px 4px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--purple-color);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.results {
+    margin: 20px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.result-section {
+    margin: 20px 0;
+}
+
+.result-grid {
+    margin-top: 10px;
+}
+
+.grid-headers, .grid-values {
+    display: grid;
+    gap: 10px;
+    padding: 12px;
+}
+
+.grid-headers {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}
+
+.grid-values {
+    background-color: var(--bg-light);
+    border-radius: 0 0 4px 4px;
+}
+
+.total-beneficiaries, .total-costs {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 4px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#combinedTotalTitle {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+#combinedTotal {
+    font-size: 1.2em;
+}
