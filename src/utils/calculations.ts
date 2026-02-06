@@ -51,8 +51,8 @@ export const calculateResults = (values: BeneficiaryValues, isSection1: boolean)
   // Section 2 calculations
   const eggCosts = [
     pregnant * 6.50,
-    severe * 0,
-    general * 0,
+    severe * 3.25,
+    general * 3.25,
     pregnant * 6.50
   ];
 
@@ -66,8 +66,8 @@ export const calculateResults = (values: BeneficiaryValues, isSection1: boolean)
   const morningSnackCount = [general * 1, severe * 1];
   
   const chatuSugarCosts = [
-    morningSnackCount[0] * 3.25,
-    morningSnackCount[1] * 3.25
+    morningSnackCount[0] * 1.67,
+    morningSnackCount[1] * 1..67
   ];
 
   const chatuSugarTotal = chatuSugarCosts[0] + chatuSugarCosts[1];
