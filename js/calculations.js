@@ -18,8 +18,8 @@ const RATES = {
     section2: {
         egg: {
             pregnant: 6.50,
-            severe: 0,
-            general: 0
+            severe: 3.25,
+            general: 3.25
         },
         vegetable: {
             pregnant: 1.63,
@@ -27,8 +27,8 @@ const RATES = {
             general: 1.09
         },
         chatuSugar: {
-            general: 3.25,
-            severe: 3.25
+            general: 1.67,
+            severe: 1.67
         }
     }
 };
