@@ -91,5 +91,37 @@ if ("serviceWorker" in navigator) {
 }
 </script>
 
+
+    <script>
+let deferredPrompt;
+const installBtn = document.getElementById("installBtn");
+
+window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.classList.remove("hidden");
+});
+
+installBtn.addEventListener("click", async () => {
+    if (!deferredPrompt) return;
+
+    deferredPrompt.prompt();
+    const choiceResult = await deferredPrompt.userChoice;
+
+    if (choiceResult.outcome === "accepted") {
+        console.log("User installed the app");
+    }
+
+    deferredPrompt = null;
+    installBtn.classList.add("hidden");
+});
+
+window.addEventListener("appinstalled", () => {
+    console.log("PWA Installed");
+    installBtn.classList.add("hidden");
+});
+</script>
+
+
 </body>
 </html>
